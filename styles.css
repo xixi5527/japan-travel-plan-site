@@ -530,7 +530,7 @@ body::before {
   transform: rotate(-12deg);
 }
 .hero::after {
-  content: "BARCELONA  ·  MALLORCA  ·  ANDALUCÍA  ·  MADRID";
+  content: "TOKYO  ·  SHIRAHAMA  ·  KUMANO  ·  OSAKA  ·  KYOTO";
   position: absolute;
   top: 22px;
   left: 24px;
