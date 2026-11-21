@@ -3,152 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f4eee8">
+  <meta name="theme-color" content="#a33a2b">
   <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="description" content="两位好友的日本8日红叶温泉旅行：东京、大阪、白滨、熊野那智、纪伊胜浦与京都。">
+  <meta name="description" content="两位好友的日本8日红叶温泉旅行：东京、白滨、熊野那智、纪伊胜浦、大阪与京都。">
   <meta property="og:title" content="日本关西｜红叶温泉之旅">
-  <meta property="og:description" content="11月27日—12月4日 · 东京 → 白滨 → 熊野那智 → 纪伊胜浦 → 大阪 → 京都">
+  <meta property="og:description" content="11月27日—12月4日 · 红叶、熊野古道与温泉">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://xixi5527.github.io/japan-travel-plan-site/">
-  <meta property="og:image" content="https://xixi5527.github.io/japan-travel-plan-site/assets/maps/templates/template-10-broad-riverland.webp">
   <title>日本关西｜红叶温泉之旅</title>
-  <link rel="stylesheet" href="styles.css?v=20261121-2">
-  <link rel="stylesheet" href="ledger.css?v=20260910-2">
-  <script src="runtime-storage.js?v=20260910-2" defer></script>
-  <script src="overview-map.js?v=20260910-2" defer></script>
-  <script src="route-ui.js?v=20260910-2" defer></script>
-  <script src="app.js?v=20260910-4" defer></script>
-  <script src="ticket-pdf-preview.js?v=20260910-2" defer></script>
-  <script src="ledger.js?v=20260910-3" defer></script>
-  <script src="site-navigation.js?v=20260910-2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261121-5">
 </head>
 <body>
-  <a class="skip-link" id="skip-link" href="#main">跳到主要内容</a>
-  <header class="topbar" id="topbar">
-    <a class="wordmark" id="wordmark" href="#top" aria-label="返回顶部"></a>
-    <nav class="primary-navigation" aria-label="主要模块">
-      <details class="travel-navigation" id="travel-navigation" hidden>
-        <summary id="travel-navigation-trigger">旅行信息</summary>
-        <div class="travel-navigation-menu" role="menu" aria-label="旅行信息栏目">
-          <a href="#flights" role="menuitem" data-module="flights" hidden>航班</a>
-          <a href="#route" role="menuitem" data-module="overview" hidden>路线</a>
-          <a href="#itinerary" role="menuitem" data-module="itinerary" hidden>行程</a>
-          <a href="#drive" role="menuitem" data-module="driving" hidden>自驾</a>
-          <a href="#prep" role="menuitem" data-module="todo" hidden>Todo</a>
-        </div>
-      </details>
-      <a class="primary-navigation__ledger" id="ledger-navigation-link" href="#ledger" data-module="ledger" hidden>记账</a>
-    </nav>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-seal" aria-hidden="true">旅</span>
+      <span><b>日本关西</b><small>AUTUMN JOURNEY · 2026</small></span>
+    </a>
+    <nav aria-label="主要栏目"><a href="#route">路线</a><a href="#days">行程</a><a href="#todo">准备</a></nav>
   </header>
 
-  <main id="main" data-site-view="travel">
-    <section class="hero" id="top" aria-labelledby="trip-title">
-      <div class="hero__eyebrow" id="trip-eyebrow"></div>
-      <h1 id="trip-title">正在载入旅程</h1>
-      <p class="hero__date" id="trip-date"></p>
-    </section>
-
-    <section class="section flights-section" id="flights" aria-labelledby="flights-title" data-module="flights" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">BOARDING</p>
-          <h2 id="flights-title">航班行程</h2>
-        </div>
-        <p class="section-index" id="flight-index" aria-live="polite">1 / 3</p>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">紅葉狩り · 熊野古道 · 温泉</p>
+        <h1>日本关西<br><em>红叶温泉之旅</em></h1>
+        <p class="hero-date">2026.11.27 — 12.04 <span>八日七夜</span></p>
+        <div class="hero-tags" aria-label="旅行主题"><span>晚秋红叶</span><span>熊野轻徒步</span><span>海景温泉</span></div>
       </div>
-      <div class="flight-carousel" id="flight-carousel" aria-label="航班卡片，可左右滑动"></div>
-      <div class="carousel-dots" id="flight-dots" aria-hidden="true"></div>
-    </section>
-
-    <section class="section route-section" id="route" aria-labelledby="route-title" data-module="overview" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">THE WHOLE JOURNEY</p>
-          <h2 id="route-title">本次旅程</h2>
-        </div>
-        <span class="soft-label" id="route-day-count"></span>
+      <div class="hero-art" aria-hidden="true">
+        <span class="sun"></span>
+        <svg class="maple maple-one" viewBox="0 0 120 120"><path d="M60 5 70 32 91 20 84 47 113 45 91 64 106 82 76 77 72 110 60 86 48 110 44 77 14 82 29 64 7 45 36 47 29 20 50 32Z"/></svg>
+        <svg class="maple maple-two" viewBox="0 0 120 120"><path d="M60 5 70 32 91 20 84 47 113 45 91 64 106 82 76 77 72 110 60 86 48 110 44 77 14 82 29 64 7 45 36 47 29 20 50 32Z"/></svg>
+        <svg class="maple maple-three" viewBox="0 0 120 120"><path d="M60 5 70 32 91 20 84 47 113 45 91 64 106 82 76 77 72 110 60 86 48 110 44 77 14 82 29 64 7 45 36 47 29 20 50 32Z"/></svg>
+        <div class="mountains"><i></i><i></i><i></i></div>
       </div>
-      <div id="route-explorer"></div>
-      <p class="route-caption">路线为行程示意，实际驾驶和步行请使用当天的 Google Maps 导航。</p>
+      <p class="vertical-note" aria-hidden="true">一期一会<br>秋色紀行</p>
     </section>
 
-    <section class="section itinerary-section" id="itinerary" aria-labelledby="itinerary-title" data-module="itinerary" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">DAY BY DAY</p>
-          <h2 id="itinerary-title">每日行程</h2>
-        </div>
-        <span class="soft-label" id="day-count"></span>
+    <section class="quick-notes" aria-label="旅行概览">
+      <article><small>旅程重点</small><strong>红叶 · 温泉 · 熊野</strong><span>两位好友同行</span></article>
+      <article><small>住宿状态</small><strong>3处已确认</strong><span>仅东京首晚待订</span></article>
+      <article class="urgent"><small>关键提醒</small><strong>12/4 凌晨送机</strong><span>北滨至KIX需预约车辆</span></article>
+    </section>
+
+    <section class="section route-section" id="route">
+      <header class="section-heading"><div><p class="kicker">旅の道筋</p><h2>八日路线</h2></div><span>东京 → 纪伊半岛 → 大阪 · 京都</span></header>
+      <div class="route-line" role="img" aria-label="北京至东京、白滨、熊野那智、纪伊胜浦、大阪、京都，最终返回北京">
+        <div class="route-stop"><i>01</i><b>东京</b><small>11.27</small></div>
+        <div class="route-stop"><i>02</i><b>白滨</b><small>11.28</small></div>
+        <div class="route-stop featured"><i>03</i><b>熊野那智</b><small>11.29</small></div>
+        <div class="route-stop"><i>04</i><b>纪伊胜浦</b><small>11.29—30</small></div>
+        <div class="route-stop"><i>05</i><b>大阪</b><small>11.30—12.4</small></div>
+        <div class="route-stop"><i>06</i><b>京都</b><small>12.2</small></div>
       </div>
-      <div class="timeline" id="timeline"></div>
     </section>
 
-    <section class="section drive-section" id="drive" aria-labelledby="drive-title" data-module="driving" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">ON THE ROAD</p>
-          <h2 id="drive-title">自驾信息</h2>
-        </div>
-        <span class="soft-label" id="rental-provider-label">RENTAL</span>
+    <section class="section" id="flights">
+      <header class="section-heading"><div><p class="kicker">空の便り</p><h2>航班行程</h2></div><span>全日空 · 4程</span></header>
+      <div class="flight-grid">
+        <article class="flight-card"><div class="flight-head"><span>11月27日 · NH962</span><b>全日空</b></div><div class="flight-route"><div><strong>PEK</strong><small>北京首都 T3</small><time>15:15</time></div><i>直飞</i><div><strong>HND</strong><small>东京羽田 T3</small><time>19:35</time></div></div></article>
+        <article class="flight-card amber"><div class="flight-head"><span>11月28日 · NH985</span><b>全日空</b></div><div class="flight-route"><div><strong>HND</strong><small>东京羽田 T2</small><time>06:20</time></div><i>晨间</i><div><strong>ITM</strong><small>大阪伊丹</small><time>07:30</time></div></div></article>
+        <article class="flight-card green"><div class="flight-head"><span>12月4日 · NH94 / NH963</span><b>全日空</b></div><div class="flight-route three"><div><strong>KIX</strong><small>关西 T1</small><time>07:05</time></div><i>羽田转机<br>约9小时</i><div><strong>HND</strong><small>T2 → T3</small><time>08:15</time></div><div><strong>PEK</strong><small>北京首都 T3</small><time>20:35</time></div></div></article>
       </div>
-      <div id="rental-card"></div>
-      <div class="accordion-stack" id="drive-notes"></div>
     </section>
 
-    <section class="section prep-section" id="prep" aria-labelledby="prep-title" data-module="todo" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">BEFORE WE GO</p>
-          <h2 id="prep-title">旅行前准备</h2>
-        </div>
-        <span class="soft-label" id="todo-progress">0 / 0</span>
+    <section class="section stays-section" id="stays">
+      <header class="section-heading"><div><p class="kicker">今宵の宿</p><h2>住宿手帖</h2></div><span>3处已确认 · 1处待订</span></header>
+      <div class="stay-grid">
+        <article class="stay-card pending"><div class="stay-date">11.27</div><div><span>东京</span><h3>首晚酒店待定</h3><p>次日06:20羽田T2起飞，优先选择机场内或羽田附近。</p></div><b>待订</b></article>
+        <article class="stay-card"><div class="stay-date">11.28</div><div><span>白滨</span><h3>南纪白滨万豪酒店</h3><p>海边温泉之夜，入住与退房时间待核对。</p></div><b>已订</b></article>
+        <article class="stay-card highlight"><div class="stay-date">11.29</div><div><span>纪伊胜浦</span><h3>熊野别邸 中之岛</h3><p>专船登岛、旅馆晚餐与海景温泉。</p></div><b>已订</b></article>
+        <article class="stay-card"><div class="stay-date">11.30—12.4</div><div><span>大阪 · 北滨</span><h3>相铁FRESA INN 北滨</h3><p>连续入住；12月4日凌晨需预约车辆前往关西机场。</p></div><b>已订</b></article>
       </div>
-      <form class="todo-form" id="todo-form">
-        <input id="todo-input" type="text" maxlength="80" placeholder="添加一项准备事项" aria-label="准备事项">
-        <button type="submit">添加</button>
-      </form>
-      <div class="todo-list" id="todo-list"></div>
     </section>
 
-    <footer class="footer">
-      <p id="footer-mark"></p>
-      <a href="#top">回到顶部 ↑</a>
-    </footer>
+    <section class="section pass-section" id="pass">
+      <div class="pass-card"><div class="pass-seal" aria-hidden="true">五日</div><div class="pass-copy"><p class="kicker">乗車券の選択</p><h2>推荐：关西广域铁路周游券 5日版</h2><p>11月28日启用，使用至12月2日。覆盖白滨、纪伊胜浦的三段黑潮号，也覆盖京都当天的JR行程。</p><ul><li>5日版与3日 Excursion Pass 官方成人价均为 12,000 日元</li><li>同价多两天，京都部分相当于额外覆盖</li><li>黑潮号为全车指定席，需提前预约</li></ul></div><a href="https://www.westjr.co.jp/travel-information/en/tickets-passes/jrwest-rail-pass/kansai_wide/" target="_blank" rel="noopener noreferrer">查看JR西日本官方说明</a></div>
+    </section>
+
+    <section class="section days-section" id="days">
+      <header class="section-heading"><div><p class="kicker">一日一景</p><h2>每日行程</h2></div><span>点击日期展开详情</span></header>
+      <div class="day-list">
+        <details class="day-card"><summary><span class="day-number">壹</span><div><small>DAY 01 · 11月27日</small><h3>北京出发，抵达东京</h3><p>北京 → 东京羽田</p></div><i></i></summary><div class="day-content"><ol><li><time>15:15</time><span>NH962 北京首都T3起飞</span></li><li><time>19:35</time><span>抵达东京羽田T3</span></li><li><time>晚间</time><span>入住东京酒店；首晚酒店仍待预订</span></li></ol><p class="note">次日清晨需返回羽田T2，酒店位置比市区观光更重要。</p></div></details>
+        <details class="day-card"><summary><span class="day-number">贰</span><div><small>DAY 02 · 11月28日</small><h3>飞抵大阪，前往白滨泡汤</h3><p>东京 → 伊丹 → 白滨</p></div><i></i></summary><div class="day-content"><ol><li><time>06:20</time><span>NH985 羽田T2起飞</span></li><li><time>07:30</time><span>抵达大阪伊丹机场</span></li><li><time>上午</time><span>转往新大阪／天王寺，搭特急黑潮号前往白滨</span></li><li><time>下午</time><span>入住南纪白滨万豪，海边散步</span></li><li><time>晚上</time><span>白滨温泉，早些休息</span></li></ol></div></details>
+        <details class="day-card featured" open><summary><span class="day-number">叁</span><div><small>DAY 03 · 11月29日</small><h3>熊野古道精华，中之岛温泉</h3><p>白滨 → 熊野那智 → 纪伊胜浦</p></div><i></i></summary><div class="day-content"><ol><li><time>上午</time><span>搭特急黑潮号前往纪伊胜浦，寄存行李</span></li><li><time>中午</time><span>乘巴士前往大门坂</span></li><li><time>下午</time><span><b>轻徒步：</b>大门坂 → 熊野那智大社 → 青岸渡寺 → 那智瀑布</span></li><li><time>晚餐前</time><span>返回胜浦，乘专船入住熊野别邸中之岛</span></li><li><time>晚上</time><span>旅馆晚餐与海景温泉</span></li></ol><p class="note">以体验、看景和拍照为主，不安排长距离古道，也不以收集盖章为目标。</p></div></details>
+        <details class="day-card"><summary><span class="day-number">肆</span><div><small>DAY 04 · 11月30日</small><h3>胜浦港町，忘归洞，返回大阪</h3><p>纪伊胜浦 → 大阪北滨</p></div><i></i></summary><div class="day-content"><ol><li><time>上午</time><span>中之岛早餐与晨汤，退房后寄存行李</span></li><li><time>上午</time><span>弁天岛白蛇弁财天海上鸟居，天气或潮位不佳可跳过</span></li><li><time>中午</time><span>胜浦渔港热闹市场品尝生金枪鱼</span></li><li><time>13:00后</time><span>浦岛酒店日归温泉：忘归洞</span></li><li><time>下午</time><span>搭特急黑潮号返回大阪，入住北滨</span></li></ol></div></details>
+        <details class="day-card"><summary><span class="day-number">伍</span><div><small>DAY 05 · 12月1日</small><h3>大阪环球影城</h3><p>大阪 · 全天</p></div><i></i></summary><div class="day-content"><ol><li><time>开园前</time><span>抵达园区，预留安检与排队时间</span></li><li><time>全天</time><span>大阪环球影城</span></li></ol><p class="note">残障票、1名同行者的票务规则及所需证明仍待确认。</p></div></details>
+        <details class="day-card maple-day"><summary><span class="day-number">陆</span><div><small>DAY 06 · 12月2日</small><h3>浄光寺，京都晚枫</h3><p>大阪 → 长冈京 → 京都 → 大阪</p></div><i></i></summary><div class="day-content"><ol><li><time>上午</time><span>大阪出发前往长冈京市井ノ内</span></li><li><time>11:00</time><span>玉龍山 浄光寺｜京都府長岡京市井ノ内南内畑73</span></li><li><time>下午</time><span>依据实时叶况选择长冈京／京都西山，或京都市区晚枫点</span></li><li><time>晚上</time><span>返回大阪北滨</span></li></ol><p class="note">永观堂、南禅寺、常寂光寺均为候选，临近日期根据红叶实况决定。</p></div></details>
+        <details class="day-card"><summary><span class="day-number">柒</span><div><small>DAY 07 · 12月3日</small><h3>大阪购物，北滨收尾</h3><p>大阪 → 北滨</p></div><i></i></summary><div class="day-content"><ol><li><time>白天</time><span>大阪购物：行李箱、鸡皮夹雪具、相机和拍立得</span></li><li><time>傍晚</time><span>返回相铁FRESA INN北滨，整理行李并尽早休息</span></li><li><time>晚上</time><span>确认凌晨车辆、退房方式和关西机场T1值机柜台</span></li></ol><p class="note warning">07:05航班不能依赖从北滨出发的首班公共交通。</p></div></details>
+        <details class="day-card"><summary><span class="day-number">捌</span><div><small>DAY 08 · 12月4日</small><h3>大阪经东京返回北京</h3><p>关西机场 → 羽田 → 北京</p></div><i></i></summary><div class="day-content"><ol><li><time>07:05</time><span>NH94 关西机场T1起飞</span></li><li><time>08:15</time><span>抵达羽田T2，东京停留约9小时10分</span></li><li><time>17:25</time><span>NH963 羽田T3起飞</span></li><li><time>20:35</time><span>抵达北京首都T3</span></li></ol></div></details>
+      </div>
+    </section>
+
+    <section class="section todo-section" id="todo">
+      <header class="section-heading"><div><p class="kicker">旅支度</p><h2>出发前准备</h2></div><span id="todo-progress">0 / 8</span></header>
+      <div class="todo-grid">
+        <label><input type="checkbox" data-todo="tokyo-hotel"><i></i><span>确认东京酒店，确保清晨能到羽田T2</span></label>
+        <label class="critical"><input type="checkbox" data-todo="kix-transfer"><i></i><span>预约12月4日凌晨北滨至关西机场T1车辆</span></label>
+        <label><input type="checkbox" data-todo="hotel-orders"><i></i><span>保存三家已订酒店的电子订单并核对入住时间</span></label>
+        <label><input type="checkbox" data-todo="rail-pass"><i></i><span>购买5日关西广域券并预约三段黑潮号指定席</span></label>
+        <label><input type="checkbox" data-todo="nakanoshima"><i></i><span>确认中之岛最晚接船、晚餐与行李寄存</span></label>
+        <label><input type="checkbox" data-todo="usj"><i></i><span>确认环球影城残障票、同行票与所需证明</span></label>
+        <label><input type="checkbox" data-todo="jokoji"><i></i><span>确认12月2日11:00浄光寺预约与停留时长</span></label>
+        <label><input type="checkbox" data-todo="documents"><i></i><span>检查护照、保险、电子凭证、网络与支付方式</span></label>
+      </div>
+      <p class="storage-note">勾选状态只保存在当前浏览器，不会上传订单号或个人信息。</p>
+    </section>
   </main>
 
-  <main class="ledger-view" id="ledger-view" data-site-view="ledger" data-module="ledger" hidden>
-    <div id="ledger-root"></div>
-  </main>
-
-  <dialog class="map-dialog" id="map-dialog">
-    <button type="button" class="dialog-close" id="map-close" aria-label="关闭路线图">关闭</button>
-    <div id="map-dialog-content"></div>
-  </dialog>
-
-  <dialog class="ticket-dialog" id="ticket-dialog" aria-labelledby="ticket-dialog-title">
-    <header>
-      <div>
-        <span>门票与预订</span>
-        <h2 id="ticket-dialog-title">门票详情</h2>
-      </div>
-      <button type="button" id="ticket-dialog-close" aria-label="关闭门票详情">关闭</button>
-    </header>
-    <div class="ticket-dialog__body" id="ticket-dialog-body"></div>
-  </dialog>
-
-  <div class="place-map-overlay" id="place-map" hidden>
-    <section class="place-map-sheet" role="dialog" aria-modal="true" aria-labelledby="place-map-title">
-      <header><h2 id="place-map-title">地点地图</h2><button id="place-map-close" type="button" aria-label="关闭地点地图">关闭</button></header>
-      <iframe id="place-map-frame" title="地点地图" src="about:blank" sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      <footer><p>地图需要能够访问 Google 的网络。若一直空白，请在系统浏览器中打开。</p><a id="place-map-external" target="_blank" rel="noopener noreferrer">用 Google Maps 打开 ↗</a></footer>
-    </section>
-  </div>
-
-  <div class="loading-error" id="loading-error" hidden>
-    <strong>行程暂时无法载入</strong>
-    <span>请确认 trip-data.json 已通过生成校验，并与网页位于同一目录。</span>
-  </div>
+  <footer class="site-footer"><span>日本 · 晚秋纪行 · 2026</span><a href="#top">回到顶部</a></footer>
+  <script>
+    (() => {
+      const boxes = [...document.querySelectorAll('[data-todo]')];
+      const progress = document.querySelector('#todo-progress');
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem('japan-trip-todos-v2') || '{}'); } catch (_) {}
+      const refresh = () => { progress.textContent = `${boxes.filter(box => box.checked).length} / ${boxes.length}`; };
+      boxes.forEach(box => {
+        box.checked = Boolean(saved[box.dataset.todo]);
+        box.addEventListener('change', () => {
+          saved[box.dataset.todo] = box.checked;
+          try { localStorage.setItem('japan-trip-todos-v2', JSON.stringify(saved)); } catch (_) {}
+          refresh();
+        });
+      });
+      refresh();
+    })();
+  </script>
 </body>
 </html>
