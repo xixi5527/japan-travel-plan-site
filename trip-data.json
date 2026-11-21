@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {"flights": true, "overview": true, "itinerary": true, "todo": true, "driving": false, "ledger": false},
+    "language": "zh-CN",
+    "persistence": {"mode": "local"}
+  },
+  "metadata": {
+    "tripId": "japan-2026-autumn",
+    "title": "日本关西｜红叶温泉之旅",
+    "language": "zh-CN",
+    "timeZone": "Asia/Tokyo",
+    "assets": {"routeMaps": ["assets/maps/templates/template-10-broad-riverland.webp"]}
+  },
+  "trip": {
+    "status": "planned",
+    "startDate": "2026-11-27",
+    "endDate": "2026-12-04",
+    "dayCount": 8,
+    "nightCountAway": 7,
+    "countries": [{"code": "JP", "nameZh": "日本", "nameEn": "Japan"}],
+    "primaryDestinationCountries": ["JP"],
+    "citiesAndAreas": ["东京", "大阪", "白滨", "熊野那智", "纪伊胜浦", "京都"],
+    "routeSummary": "北京 → 东京 → 大阪 → 白滨 → 熊野那智 → 纪伊胜浦 → 大阪 → 京都 → 关西机场",
+    "groupSize": 2,
+    "heroTitle": "日本关西",
+    "heroEyebrow": "AUTUMN LEAVES · KUMANO · ONSEN"
+  },
+  "flightJourneys": [
+    {"id": "journey-beijing-tokyo", "title": "北京 → 东京", "status": "confirmed"},
+    {"id": "journey-tokyo-osaka", "title": "东京 → 大阪", "status": "confirmed"},
+    {"id": "journey-return", "title": "大阪 → 东京 → 北京", "status": "confirmed"}
+  ],
+  "flights": [
+    {
+      "id": "flight-nh962", "journeyId": "journey-beijing-tokyo", "sequence": 1,
+      "airline": {"nameZh": "全日空", "code": "NH"}, "flightNumber": "NH962",
+      "departure": {"airportCode": "PEK", "city": "北京", "airportName": "北京首都国际机场", "terminal": "T3", "date": "2026-11-27", "time": "15:15", "utcOffset": "+08:00"},
+      "arrival": {"airportCode": "HND", "city": "东京", "airportName": "东京羽田机场", "terminal": "T3", "date": "2026-11-27", "time": "19:35", "utcOffset": "+09:00"}
+    },
+    {
+      "id": "flight-nh985", "journeyId": "journey-tokyo-osaka", "sequence": 1,
+      "airline": {"nameZh": "全日空", "code": "NH"}, "flightNumber": "NH985",
+      "departure": {"airportCode": "HND", "city": "东京", "airportName": "东京羽田机场", "terminal": "T2", "date": "2026-11-28", "time": "06:20", "utcOffset": "+09:00"},
+      "arrival": {"airportCode": "ITM", "city": "大阪", "airportName": "大阪国际机场（伊丹）", "terminal": "南航站楼", "date": "2026-11-28", "time": "07:30", "utcOffset": "+09:00"}
+    },
+    {
+      "id": "flight-nh94", "journeyId": "journey-return", "sequence": 1,
+      "airline": {"nameZh": "全日空", "code": "NH"}, "flightNumber": "NH94",
+      "departure": {"airportCode": "KIX", "city": "大阪", "airportName": "关西国际机场", "terminal": "T1", "date": "2026-12-04", "time": "07:05", "utcOffset": "+09:00"},
+      "arrival": {"airportCode": "HND", "city": "东京", "airportName": "东京羽田机场", "terminal": "T2", "date": "2026-12-04", "time": "08:15", "utcOffset": "+09:00"}
+    },
+    {
+      "id": "flight-nh963", "journeyId": "journey-return", "sequence": 2,
+      "airline": {"nameZh": "全日空", "code": "NH"}, "flightNumber": "NH963",
+      "connectionFromPrevious": {"plannedDurationText": "东京停留约9小时10分"},
+      "departure": {"airportCode": "HND", "city": "东京", "airportName": "东京羽田机场", "terminal": "T3", "date": "2026-12-04", "time": "17:25", "utcOffset": "+09:00"},
+      "arrival": {"airportCode": "PEK", "city": "北京", "airportName": "北京首都国际机场", "terminal": "T3", "date": "2026-12-04", "time": "20:35", "utcOffset": "+08:00"}
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "stay-tokyo", "name": "东京住宿待补充", "city": "东京", "status": "pending",
+      "checkIn": {"date": "2026-11-27", "time": "晚间"}, "checkOut": {"date": "2026-11-28", "time": "清晨"},
+      "note": "次日06:20羽田T2起飞，应优先考虑羽田机场或可凌晨到达机场的位置。"
+    },
+    {
+      "id": "stay-shirahama", "name": "南纪白滨万豪酒店", "city": "白滨", "status": "confirmed",
+      "checkIn": {"date": "2026-11-28", "time": "待确认"}, "checkOut": {"date": "2026-11-29", "time": "待确认"},
+      "note": "已预订；入住与退房时间待补充。"
+    },
+    {
+      "id": "stay-katsuura", "name": "熊野别邸 中之岛", "city": "纪伊胜浦", "status": "confirmed",
+      "checkIn": {"date": "2026-11-29", "time": "晚餐前"}, "checkOut": {"date": "2026-11-30", "time": "上午"},
+      "note": "需确认最晚接船与晚餐时间。"
+    },
+    {
+      "id": "stay-osaka", "name": "相铁FRESA INN 北滨", "city": "大阪", "status": "confirmed",
+      "checkIn": {"date": "2026-11-30", "time": "晚间"}, "checkOut": {"date": "2026-12-04", "time": "凌晨"},
+      "note": "12月4日07:05关西机场起飞，不建议当晨从北滨依赖公共交通赶机场；12月3日晚宜改住临空城或机场。"
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": null, "plannedRoadLegs": [], "drivingNotes": [], "drivingReferenceLinks": [], "rentalChecklist": [],
+    "publicTransitAndRail": [
+      {"id": "transport-itm-shirahama", "date": "2026-11-28", "from": "伊丹机场", "to": "白滨", "mode": "airport-transfer-and-kuroshio", "status": "to-book"},
+      {"id": "transport-shirahama-katsuura", "date": "2026-11-29", "from": "白滨", "to": "纪伊胜浦", "mode": "kuroshio", "status": "to-book"},
+      {"id": "transport-katsuura-osaka", "date": "2026-11-30", "from": "纪伊胜浦", "to": "大阪", "mode": "kuroshio", "status": "to-book"},
+      {"id": "transport-osaka-kyoto", "date": "2026-12-02", "from": "大阪", "to": "长冈京／京都", "mode": "rail-and-local-bus", "status": "planned"}
+    ]
+  },
+  "days": [
+    {
+      "id": "day-01", "day": 1, "date": "2026-11-27", "title": "抵达东京", "locations": ["北京", "东京"],
+      "schedule": [
+        {"id": "day-01-item-01", "time": "15:15", "text": "NH962 北京首都T3起飞", "type": "transfer"},
+        {"id": "day-01-item-02", "time": "19:35", "text": "抵达东京羽田T3", "type": "transfer"},
+        {"id": "day-01-item-03", "time": "晚间", "text": "入住东京酒店；次日清晨返回羽田T2", "type": "check-in"}
+      ],
+      "notes": ["东京酒店待补充，优先选择羽田机场附近。"]
+    },
+    {
+      "id": "day-02", "day": 2, "date": "2026-11-28", "title": "飞抵大阪 · 前往白滨泡汤", "locations": ["东京", "大阪", "白滨"],
+      "schedule": [
+        {"id": "day-02-item-01", "time": "06:20", "text": "NH985 羽田T2起飞", "type": "transfer"},
+        {"id": "day-02-item-02", "time": "07:30", "text": "抵达大阪伊丹机场", "type": "transfer"},
+        {"id": "day-02-item-03", "time": "上午", "text": "转往新大阪／天王寺，搭特急黑潮号前往白滨", "type": "transfer", "ticketIds": ["ticket-kansai-wide"]},
+        {"id": "day-02-item-04", "time": "下午", "text": "白滨入住、休息；视时间安排海边散步", "type": "check-in"},
+        {"id": "day-02-item-05", "time": "晚上", "text": "白滨温泉", "type": "attraction"}
+      ],
+      "notes": ["南纪白滨万豪酒店已预订；入住时间待补充。"]
+    },
+    {
+      "id": "day-03", "day": 3, "date": "2026-11-29", "title": "熊野古道精华 · 中之岛", "locations": ["白滨", "熊野那智", "纪伊胜浦"],
+      "schedule": [
+        {"id": "day-03-item-01", "time": "上午", "text": "白滨搭特急黑潮号前往纪伊胜浦", "type": "transfer", "ticketIds": ["ticket-kansai-wide"]},
+        {"id": "day-03-item-02", "time": "中午前后", "text": "寄存行李，乘巴士前往大门坂", "type": "transfer"},
+        {"id": "day-03-item-03", "time": "下午", "text": "轻徒步：大门坂 → 熊野那智大社 → 青岸渡寺 → 那智瀑布；以体验和拍照为主", "type": "walk", "placeId": "place-nachi"},
+        {"id": "day-03-item-04", "time": "晚餐前", "text": "返回纪伊胜浦，乘专船入住熊野别邸中之岛", "type": "check-in"},
+        {"id": "day-03-item-05", "time": "晚上", "text": "中之岛温泉与旅馆晚餐", "type": "attraction"}
+      ],
+      "notes": ["不安排长距离古道，也不以收集盖章为目标。", "需根据旅馆晚餐和末班接驳船时间倒推。"]
+    },
+    {
+      "id": "day-04", "day": 4, "date": "2026-11-30", "title": "胜浦港町 · 忘归洞 · 返回大阪", "locations": ["纪伊胜浦", "大阪"],
+      "schedule": [
+        {"id": "day-04-item-01", "time": "上午", "text": "中之岛早餐与晨汤，退房后乘船上岸并寄存行李", "type": "check-out"},
+        {"id": "day-04-item-02", "time": "上午", "text": "弁天岛白蛇弁财天海上鸟居；天气或潮位不佳可跳过", "type": "attraction", "placeId": "place-benten"},
+        {"id": "day-04-item-03", "time": "中午", "text": "胜浦渔港热闹市场品尝生金枪鱼", "type": "restaurant", "placeId": "place-market"},
+        {"id": "day-04-item-04", "time": "13:00后", "text": "浦岛酒店日归温泉：忘归洞", "type": "attraction", "placeId": "place-urashima", "ticketIds": ["ticket-urashima"]},
+        {"id": "day-04-item-05", "time": "下午", "text": "取行李，搭特急黑潮号返回大阪", "type": "transfer", "ticketIds": ["ticket-kansai-wide"]}
+      ],
+      "notes": ["避免预约过早的大阪晚餐。"]
+    },
+    {
+      "id": "day-05", "day": 5, "date": "2026-12-01", "title": "大阪环球影城", "locations": ["大阪"],
+      "schedule": [
+        {"id": "day-05-item-01", "time": "开园前", "text": "抵达大阪环球影城，预留安检与排队时间", "type": "transfer"},
+        {"id": "day-05-item-02", "time": "全天", "text": "大阪环球影城；残障票与1名同行者的规则待确认", "type": "attraction", "placeId": "place-usj", "ticketIds": ["ticket-usj"]}
+      ],
+      "notes": ["门票与入园方式尚未确认。"]
+    },
+    {
+      "id": "day-06", "day": 6, "date": "2026-12-02", "title": "浄光寺 · 京都晚枫", "locations": ["大阪", "长冈京", "京都"],
+      "schedule": [
+        {"id": "day-06-item-01", "time": "上午", "text": "大阪出发前往长冈京市井ノ内", "type": "transfer"},
+        {"id": "day-06-item-02", "time": "11:00", "text": "玉龍山 浄光寺（京都府长冈京市井ノ内南内畑73）", "type": "attraction", "placeId": "place-jokoji"},
+        {"id": "day-06-item-03", "time": "下午", "text": "依据实时红叶状态：长冈京／京都西山，或转京都市区晚枫点", "type": "attraction", "placeId": "place-kyoto"},
+        {"id": "day-06-item-04", "time": "晚上", "text": "返回大阪", "type": "transfer"}
+      ],
+      "notes": ["永观堂、南禅寺、常寂光寺等均为候选，以实时叶况为准。", "浄光寺交通以寺院官网建议为准。"]
+    },
+    {
+      "id": "day-07", "day": 7, "date": "2026-12-03", "title": "大阪购物 · 机场前泊", "locations": ["大阪", "临空城／关西机场"],
+      "schedule": [
+        {"id": "day-07-item-01", "time": "白天", "text": "大阪购物：行李箱、鸡皮夹雪具、相机和拍立得", "type": "shopping"},
+        {"id": "day-07-item-02", "time": "傍晚前", "text": "整理行李并前往临空城或关西机场附近住宿", "type": "transfer"},
+        {"id": "day-07-item-03", "time": "晚上", "text": "确认次日航站楼、值机柜台与机场接驳", "type": "todo"}
+      ],
+      "notes": ["07:05航班不建议从北滨酒店当晨乘公共交通赶机场。"]
+    },
+    {
+      "id": "day-08", "day": 8, "date": "2026-12-04", "title": "大阪 → 东京 → 北京", "locations": ["大阪", "东京", "北京"],
+      "schedule": [
+        {"id": "day-08-item-01", "time": "07:05", "text": "NH94 关西机场T1起飞", "type": "transfer"},
+        {"id": "day-08-item-02", "time": "08:15", "text": "抵达羽田T2；白天行李与活动安排待补充", "type": "transfer"},
+        {"id": "day-08-item-03", "time": "17:25", "text": "NH963 羽田T3起飞", "type": "transfer"},
+        {"id": "day-08-item-04", "time": "20:35", "text": "抵达北京首都T3", "type": "transfer"}
+      ],
+      "notes": ["羽田T2至T3换航站楼；东京停留约9小时10分。"]
+    }
+  ],
+  "places": [
+    {"id": "city-tokyo", "nameZh": "东京", "cityOrArea": "Tokyo", "countryCode": "JP", "category": "city", "navigation": {"query": "Tokyo, Japan"}},
+    {"id": "city-osaka", "nameZh": "大阪", "cityOrArea": "Osaka", "countryCode": "JP", "category": "city", "navigation": {"query": "Osaka, Japan"}},
+    {"id": "city-shirahama", "nameZh": "白滨", "cityOrArea": "Wakayama", "countryCode": "JP", "category": "city", "navigation": {"query": "Shirahama, Wakayama, Japan"}},
+    {"id": "city-katsuura", "nameZh": "纪伊胜浦", "cityOrArea": "Wakayama", "countryCode": "JP", "category": "city", "navigation": {"query": "Kii-Katsuura Station, Japan"}},
+    {"id": "city-kyoto", "nameZh": "京都", "cityOrArea": "Kyoto", "countryCode": "JP", "category": "city", "navigation": {"query": "Kyoto, Japan"}},
+    {"id": "place-nachi", "nameZh": "大门坂与那智山", "cityOrArea": "那智胜浦", "countryCode": "JP", "category": "attraction", "navigation": {"query": "Daimon-zaka, Nachikatsuura, Japan"}},
+    {"id": "place-benten", "nameZh": "弁天岛白蛇弁财天", "cityOrArea": "那智胜浦", "countryCode": "JP", "category": "attraction", "navigation": {"query": "弁天島 白蛇弁財天 那智勝浦"}},
+    {"id": "place-market", "nameZh": "胜浦渔港热闹市场", "cityOrArea": "纪伊胜浦", "countryCode": "JP", "category": "restaurant", "navigation": {"query": "勝浦漁港にぎわい市場"}},
+    {"id": "place-urashima", "nameZh": "浦岛酒店忘归洞", "cityOrArea": "纪伊胜浦", "countryCode": "JP", "category": "attraction", "navigation": {"query": "ホテル浦島 忘帰洞"}},
+    {"id": "place-usj", "nameZh": "大阪环球影城", "cityOrArea": "大阪", "countryCode": "JP", "category": "attraction", "navigation": {"query": "Universal Studios Japan"}},
+    {"id": "place-jokoji", "nameZh": "玉龍山 浄光寺", "cityOrArea": "长冈京", "countryCode": "JP", "category": "attraction", "navigation": {"query": "京都府長岡京市井ノ内南内畑73 浄光寺"}},
+    {"id": "place-kyoto", "nameZh": "京都晚枫机动区", "cityOrArea": "京都", "countryCode": "JP", "category": "area", "navigation": {"query": "Kyoto, Japan"}}
+  ],
+  "restaurants": [],
+  "bookingsAndTickets": [
+    {"name": "JR关西广域铁路周游券与黑潮号指定席", "day": 2, "status": "needed"},
+    {"name": "浦岛酒店日归温泉", "day": 4, "status": "planned"},
+    {"name": "大阪环球影城门票", "day": 5, "status": "needed"}
+  ],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "勾选状态只保存在当前浏览器；公开页面不保存订单号或证件信息。",
+    "items": [
+      {
+        "id": "ticket-kansai-wide", "name": "JR关西广域铁路周游券（5日）", "day": 2, "dayId": "day-02",
+        "requirement": "advance-recommended", "purchaseStatus": "needed",
+        "guidance": ["推荐选择5日版，11月28日至12月2日使用，覆盖白滨、纪伊胜浦和京都。", "官方现价：3日Excursion Pass与5日Kansai WIDE Area Pass均为成人12,000日元；符合短期游客资格时5日版同价多覆盖两天。", "黑潮号为全车指定席，需要提前预约。"],
+        "scheduleItemIds": ["day-02-item-03", "day-03-item-01", "day-04-item-05"]
+      },
+      {
+        "id": "ticket-urashima", "name": "浦岛酒店日归温泉", "day": 4, "dayId": "day-04",
+        "requirement": "needs-confirmation", "purchaseStatus": "planned",
+        "guidance": ["计划13:00后进入忘归洞；营业、清扫和休馆安排需临行前复核。"],
+        "scheduleItemIds": ["day-04-item-04"]
+      },
+      {
+        "id": "ticket-usj", "name": "大阪环球影城入园票", "day": 5, "dayId": "day-05",
+        "requirement": "needs-confirmation", "purchaseStatus": "needed",
+        "guidance": ["当前计划为残障票与1名同行者；需核对购买渠道、适用证明及入园规则。"],
+        "scheduleItemIds": ["day-05-item-02"]
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [
+      {"id": "todo-tokyo-hotel", "text": "确认东京酒店，确保能在11月28日清晨到达羽田T2", "completed": false},
+      {"id": "todo-kix-hotel", "text": "预订12月3日临空城／关西机场前泊", "completed": false},
+      {"id": "todo-hotels", "text": "保存白滨万豪、中之岛和北滨FRESA INN的电子订单并核对入住时间", "completed": false},
+      {"id": "todo-pass", "text": "购买JR关西广域铁路周游券，并预约三段黑潮号指定席", "completed": false},
+      {"id": "todo-nakanoshima", "text": "确认中之岛最晚接船、晚餐时间和行李寄存", "completed": false},
+      {"id": "todo-usj", "text": "确认环球影城残障票、同行票与所需证明", "completed": false},
+      {"id": "todo-jokoji", "text": "确认12月2日11:00浄光寺预约与停留时长", "completed": false},
+      {"id": "todo-documents", "text": "检查护照、保险、电子凭证、移动网络和支付方式", "completed": false}
+    ],
+    "preparationsExplicitlyMentioned": ["购买行李箱", "采购鸡皮夹雪具", "看看相机和拍立得"],
+    "missingNote": "仅东京酒店尚未预订；黑潮号车次、环球影城票务和12月4日清晨前往关西机场的方案仍需补充。"
+  },
+  "mapLinks": {
+    "cityLevelNavigationDisabled": false,
+    "navigationPlaces": [],
+    "navigationPolicy": {
+      "noNavigationTypes": ["flight", "note", "rest", "todo", "shopping"],
+      "selfNavigationTypes": ["transfer", "check-in", "check-out", "restaurant", "attraction", "walk", "hike"]
+    },
+    "note": "地点链接仅用于导航，营业时间与交通班次请临行前复核。",
+    "providedGoogleMapsLinks": []
+  },
+  "issuesAndUncertainties": [
+    {"id": "issue-tokyo-stay", "status": "open", "category": "accommodation", "text": "11月27日东京酒店未提供，次日06:20羽田起飞。"},
+    {"id": "issue-kix-access", "status": "critical", "category": "transport", "text": "12月4日07:05关西机场起飞，北滨酒店不适合依赖首班公共交通赶机。"},
+    {"id": "issue-hotel-status", "status": "resolved", "category": "accommodation", "text": "白滨万豪、中之岛与北滨FRESA INN均已预订；仅东京住宿待定。"},
+    {"id": "issue-kuroshio", "status": "open", "category": "transport", "text": "三段黑潮号具体车次与指定席尚未预约。"},
+    {"id": "issue-usj", "status": "open", "category": "ticket", "text": "环球影城残障票与同行票规则尚未确认。"},
+    {"id": "issue-kyoto-maple", "status": "open", "category": "decision", "text": "12月2日下午红叶点应依据临近日期实时叶况决定。"}
+  ],
+  "routeMap": {
+    "defaultRegionId": "japan-kansai",
+    "regions": [
+      {
+        "id": "japan-kansai", "label": "东京与关西", "countryCode": "JP", "scope": "template-schematic",
+        "mapMode": "frozen-template", "templateId": "broad-riverland", "days": [2, 3, 4, 6],
+        "canvas": {"width": 1448, "height": 1086}, "projection": {"type": "relative-schematic", "bounds": null},
+        "baseImage": "assets/maps/templates/template-10-broad-riverland.webp",
+        "title": "日本 · 红叶温泉路线", "ariaLabel": "东京、关西、纪伊半岛与京都路线示意图",
+        "disclaimer": "本图表达旅行地点与路线顺序，不代表实时交通线路或精确比例。",
+        "heading": {"text": "JAPAN · AUTUMN 2026", "x": 42, "y": 96, "size": 38},
+        "legend": {"x": 45, "y": 154, "gap": 42}, "annotations": [],
+        "routes": [
+          {"day": 2, "color": "#b54b3a", "placeIds": ["city-tokyo", "city-osaka", "city-shirahama"], "paths": ["M1110 260 C970 300 850 370 720 460", "M720 460 C670 535 625 630 590 735"]},
+          {"day": 3, "color": "#d28a32", "placeIds": ["city-shirahama", "city-katsuura"], "paths": ["M590 735 C690 780 790 790 890 755"]},
+          {"day": 4, "color": "#496c59", "placeIds": ["city-katsuura", "city-osaka"], "paths": ["M890 755 C840 610 790 525 720 460"]},
+          {"day": 6, "color": "#8a5b83", "placeIds": ["city-osaka", "city-kyoto", "city-osaka"], "paths": ["M720 460 C745 410 765 365 790 325", "M790 325 C765 365 745 410 720 460"]}
+        ],
+        "places": [
+          {"id": "city-tokyo", "x": 1110, "y": 260, "color": "#b54b3a", "tx": 1140, "ty": 235, "size": 25, "anchor": "start", "lines": ["东京"], "query": "Tokyo, Japan"},
+          {"id": "city-osaka", "x": 720, "y": 460, "color": "#496c59", "tx": 685, "ty": 430, "size": 25, "anchor": "end", "lines": ["大阪"], "query": "Osaka, Japan"},
+          {"id": "city-shirahama", "x": 590, "y": 735, "color": "#d28a32", "tx": 548, "ty": 700, "size": 25, "anchor": "end", "lines": ["白滨"], "query": "Shirahama, Wakayama"},
+          {"id": "city-katsuura", "x": 890, "y": 755, "color": "#d28a32", "tx": 925, "ty": 720, "size": 25, "anchor": "start", "lines": ["熊野那智", "纪伊胜浦"], "query": "Kii-Katsuura, Wakayama"},
+          {"id": "city-kyoto", "x": 790, "y": 325, "color": "#8a5b83", "tx": 820, "ty": 300, "size": 25, "anchor": "start", "lines": ["京都", "长冈京"], "query": "Nagaokakyo, Kyoto"}
+        ]
+      }
+    ]
+  }
+}
