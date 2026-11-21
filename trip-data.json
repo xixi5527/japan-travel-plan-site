@@ -78,7 +78,7 @@
     {
       "id": "stay-osaka", "name": "相铁FRESA INN 北滨", "city": "大阪", "status": "confirmed",
       "checkIn": {"date": "2026-11-30", "time": "晚间"}, "checkOut": {"date": "2026-12-04", "time": "凌晨"},
-      "note": "12月4日07:05关西机场起飞，不建议当晨从北滨依赖公共交通赶机场；12月3日晚宜改住临空城或机场。"
+      "note": "已预订至12月4日退房。因12月4日07:05关西机场起飞，不能依赖首班公共交通；需提前预约凌晨包车／出租车并确认酒店深夜退房方式。"
     }
   ],
   "groundTransport": {
@@ -152,11 +152,11 @@
       "notes": ["永观堂、南禅寺、常寂光寺等均为候选，以实时叶况为准。", "浄光寺交通以寺院官网建议为准。"]
     },
     {
-      "id": "day-07", "day": 7, "date": "2026-12-03", "title": "大阪购物 · 机场前泊", "locations": ["大阪", "临空城／关西机场"],
+      "id": "day-07", "day": 7, "date": "2026-12-03", "title": "大阪购物 · 北滨收尾", "locations": ["大阪", "北滨"],
       "schedule": [
         {"id": "day-07-item-01", "time": "白天", "text": "大阪购物：行李箱、鸡皮夹雪具、相机和拍立得", "type": "shopping"},
-        {"id": "day-07-item-02", "time": "傍晚前", "text": "整理行李并前往临空城或关西机场附近住宿", "type": "transfer"},
-        {"id": "day-07-item-03", "time": "晚上", "text": "确认次日航站楼、值机柜台与机场接驳", "type": "todo"}
+        {"id": "day-07-item-02", "time": "傍晚", "text": "返回已预订的相铁FRESA INN北滨，整理行李并尽早休息", "type": "check-in"},
+        {"id": "day-07-item-03", "time": "晚上", "text": "确认凌晨包车／出租车、退房方式、关西机场T1值机柜台", "type": "todo"}
       ],
       "notes": ["07:05航班不建议从北滨酒店当晨乘公共交通赶机场。"]
     },
@@ -218,7 +218,7 @@
   "preTrip": {
     "packingItems": [
       {"id": "todo-tokyo-hotel", "text": "确认东京酒店，确保能在11月28日清晨到达羽田T2", "completed": false},
-      {"id": "todo-kix-hotel", "text": "预订12月3日临空城／关西机场前泊", "completed": false},
+      {"id": "todo-kix-transfer", "text": "预约12月4日凌晨北滨前往关西机场T1的包车／出租车", "completed": false},
       {"id": "todo-hotels", "text": "保存白滨万豪、中之岛和北滨FRESA INN的电子订单并核对入住时间", "completed": false},
       {"id": "todo-pass", "text": "购买JR关西广域铁路周游券，并预约三段黑潮号指定席", "completed": false},
       {"id": "todo-nakanoshima", "text": "确认中之岛最晚接船、晚餐时间和行李寄存", "completed": false},
